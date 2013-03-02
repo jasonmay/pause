@@ -16,8 +16,7 @@ sub DESTROY {}
 
 sub verbose {
     my($self,$level,@what) = @_;
-    my $main = $self->{DIO};
-    $main->verbose($level,@what);
+    PAUSE->log($self, $level, @what);
 }
 
 # package PAUSE::pmfile;
